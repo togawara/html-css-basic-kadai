@@ -1,0 +1,37 @@
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+  font-size: 20px;
+}
+
+
+h1 {
+  /* Googleフォント */
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  font-size: 2em;
+  line-height: 1.2em;
+  text-align: center;
+  text-shadow: 2px 2px 2px gray; 
+  border-bottom: solid 3px rgb(115,115,114);
+}
+
+.color-skyblue{
+  color: skyblue;
+  text-align: center;
+}
+
+.color-pink{
+  color: rgb(255, 192, 203);
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+#basic p{
+  font-weight: bold;
+}
