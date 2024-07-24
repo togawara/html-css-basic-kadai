@@ -1,0 +1,97 @@
+header {
+  /* 下の余白20px 背景色rgb(244,79,79)　中央揃え */
+  margin-bottom: 20px;
+  background: rgb(244,79,79);
+  text-align: center;
+}
+
+body {
+  margin: 0px;  
+}
+
+main {
+  /* 要素内の上下左右余白を10px */
+  padding: 10px;
+}
+
+footer {
+  background-color: rgb(244,79,79);
+  text-align: center;
+}
+
+h1 {
+  /* 上下左右余白0  文字色白*/
+  margin: 0px;
+  color: rgb(255,255,255);
+}
+
+h2 {
+  font-size: 25px;
+  /* 下線設定 */
+  border-bottom: dotted 3px rgb(236,122,122);
+}
+
+/* h2要素の前に●を表示 */
+h2::before {
+  content: "●";
+  color: rgb(239,111,139);
+}
+
+p {
+  margin: 0px;
+  font-size: 20px;
+}
+
+a {
+  font-size: 20px;
+  color: rgb(255,255,255);
+}
+
+/* 訪問済みのリンクの色を変える */
+a:visited {
+  color: rgb(193,234,251);
+}
+
+/* マウスカーソルが乗ると文字色変わる */
+a:hover {
+  color: rgb(245,178,168);
+}
+
+#parent {
+   display: flex; /* Flexコンテナ */
+   justify-content: space-around;/* 左右とも均等な間隔で配置 */
+}
+
+.contents {
+   border: solid 3px rgb(238,204,204); /* 線（太さ3px,実線、色rgb(238,204,204)で要素を囲む） */
+   flex-basis: 25%; /* アイテムの幅の初期サイズ設定 */
+   padding: 10px 15px;/* 要素内余白設定 */
+   margin: 20px 0px; /* 要素外余白設定 */
+   text-align: center;/* 中央揃え */
+}
+
+/* 二番目のp要素内のテキストの中で一番目の文字「傘」を変更 */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97,206,249);
+}
+
+.contents img {
+  /* margin上下10px,左右0 幅70％ */
+  margin: 10px 0px;
+  width: 70%;
+}
+
+/* 画面幅768px以下になったら表示が変わる */
+@media screen and (max-width:768px) {
+  h2 {
+    font-size: 30px;    
+  }
+  p {
+    font-size: 25px;
+  }
+  /* parents内の要素が縦に並ぶ */
+  #parent { 
+    flex-direction: column; 
+  }
+}
